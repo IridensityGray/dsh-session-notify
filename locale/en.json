@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Conversation pause reminders",
+    "description": "Reminds you when a conversation pauses: a Windows notification, a short chime, and a small clickable card at the top-right of the screen. Covers waiting for a choice, waiting for approval, a finished turn, an idle conversation, and errors or interruptions, across every workspace. The bell at the sidebar foot toggles each reminder kind, sets the idle delay, and plays tests.",
+    "detail": "docs/DETAIL.md"
+  }
+}
