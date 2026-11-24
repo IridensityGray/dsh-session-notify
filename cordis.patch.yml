@@ -1,0 +1,15 @@
+# Session-notify bundle. The Host half receives notification requests and shows
+# the Windows toast and sound; the Client half draws the on-screen cards.
+- insert:
+    - id: session-notify
+      name: '@iridensity_gray/dsh-session-notify'
+      config:
+        # Windows toast notification.
+        toast: true
+        # System sound.
+        sound: true
+        # Remind while the window is focused: off = never, window = only when the
+        # window is not visible, any = always.
+        whenPresent: 'off'
+        # Minimum gap between two alerts for the same session.
+        minGapMs: 3000
