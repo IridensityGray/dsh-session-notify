@@ -1,0 +1,64 @@
+{
+  "name": "@iridensity_gray/dsh-session-notify",
+  "version": "0.1.0",
+  "description": "Notifies you when a DSH conversation pauses: a Windows toast, a short chime and an on-screen card for questions, approvals, finished turns, idle sessions, errors and interruptions.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "docs/DETAIL.md",
+    "docs/DETAIL.zh.md",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "plugin",
+    "notifications",
+    "desktop-notifications",
+    "productivity"
+  ],
+  "author": "BDJC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IridensityGray/dsh-session-notify.git"
+  },
+  "homepage": "https://github.com/IridensityGray/dsh-session-notify#readme",
+  "bugs": {
+    "url": "https://github.com/IridensityGray/dsh-session-notify/issues"
+  },
+  "engines": {
+    "dsh": ">=0.2.2-rc.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}
